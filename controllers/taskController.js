@@ -4,12 +4,13 @@ const prisma = new PrismaClient();
 
 //create task
 exports.createTask = async (req,res) => {
-    await prisma.task.create({
+
+const task=  await prisma.task.create({
         data:{
             name: req.body.name,
         },
     });
-    res.sendStatus(200);
+    res.json(task);
 };
 
 //get all tasks 
@@ -25,7 +26,7 @@ const tasks = await prisma.task.findMany({
     orderBy: { createdAt: 'desc' }
 });
 
-res.render('index', { tasks, filter });
+res.render('index', {title:'Task Manager',tasks, filter });
 };
 
 //toggle tasks (completed or not)

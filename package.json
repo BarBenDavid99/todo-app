@@ -2,9 +2,9 @@
   "name": "todo-app",
   "version": "1.0.0",
   "main": "index.js",
-"scripts": {
-  "dev": "nodemon index.js"
-},
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -13,7 +13,9 @@
     "@prisma/client": "^6.13.0",
     "body-parser": "^2.2.0",
     "ejs": "^3.1.10",
+    "ejs-mate": "^4.0.0",
     "express": "^5.1.0",
+    "express-ejs-layouts": "^2.5.1",
     "method-override": "^3.0.0",
     "prisma": "^6.13.0"
   },
